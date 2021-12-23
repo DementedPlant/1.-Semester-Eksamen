@@ -2,80 +2,210 @@
 /* CSS Document */
 
 
-
+/* Her sætter vi hele hjemmesidens baggrund til sort igennem vores generelle body element */
 body {
 	background: black;
-	background-image: url("LimboInsideBackground.png");
-	background-repeat: no-repeat;
-	background-size: 100%;
-    background-attachment: scroll;
-	
 }
 
 
 
 
-/* THE PLAYDEAD TITLE ON FRONT PAGE */
-.titlePlaydead {
+
+
+
+/* Knappen til Limbo på forsiden. Bemærk dens opacity er sat ned til 85%. Dette er for at gøre billedet lysere når musen er over billedet. width er sat til 49% for at lave en tydeligere barriere mellem Limbos knap og Insides knap så det bliver tydeligere at det er to forskellige spil. */
+.LimboKnapFront {
+  float: left;
+  width: 49%;	
+  opacity:85%;
+}
+
+/* Her sætter vi Limbo knappens billede til en opacity på 100%. Da baggrunden på siden er sort betyder det at billedet bliver lysere. Dermed bliver det mere intuitivt at man kan trykke her og at billedet faktisk er en knap */
+.LimboKnapFront:hover {
+  float: left;
+	opacity:100%;
+
+
+}
+
+
+
+
+/* Knappen til Inside på forsiden. Bemærk dens opacity er sat ned til 85% ligesom ovenfor. Dens width er også sat til 49%, så barrieren mellem de to knapper er præcist i midten af skærmen. */
+.InsideKnapFront {
+  float: right;
+  width: 49%;	
+	opacity:85%;
+}
+
+/* Ligesom ovenfor sætter vi Inside knappens billede til en opacity på 100%. Dette gør at billedet bliver lysere. Dermed bliver det mere intuitivt at man kan trykke her og at billedet faktisk er en knap */
+.InsideKnapFront:hover {
+  float: right;
+  
+	opacity:100%;
+
+}
+
+
+
+
+
+
+
+/* Her sætter vi det øverste baggrundsbillede i både Limbos og Insides side til 100% af skærmens bredde. Dette gør den responsiv og at den skalerer alt efter vinduets opløsning. */
+.spilBaggrund {
+	width:100%;
+}
+
+
+
+
+/*Indstillingerne for youtube traileren der dukker op på henholdsvis Limbo og Insides side, samt koden der gør den responsiv */
+
+.trailerBeholder{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+	
+}
+.trailerBeholder iframe{
+  margin-top:1%;
+	
+  margin-left: 30%;
+  margin-right: auto;
+	display: block;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 40%;
+  height: 40%;
+}
+
+
+
+/* Indstillingerne for titlen der dukker op øverst på Limbos side */
+.TitelLimbo {
   display: block;
-  margin-top:-9%;
+  margin-top:-44%;
   margin-left: auto;
   margin-right: auto;
   width: 35%;
 }
 
-
-
-
-/* THE LIMBO TITLE ON FRONT PAGE */
-.titleLimboFront {
-	float: left;
+/* Indstillingerne for titlen der dukker op øverst på Insides side */
+.TitelInside {
   display: block;
-  margin-top:34%;
-  margin-left: 20%;
+  margin-top:-55%;
+  margin-left: auto;
   margin-right: auto;
-  width: 25%;
-	
+  width: 35%;
 }
 
-
-/* THE INSIDE TITLE ON FRONT PAGE */
-.titleInsideFront {
-	float: left;
+/*Indstillingerne for listen af stedder du kan købe Limbo og Inside */
+.spilLinks {
   display: block;
-  margin-top:34%;
-  margin-left: 11%;
+  margin-top:5%;
+  margin-left: auto;
   margin-right: auto;
-  width: 25%;
-	
+  width: 70%;
 }
 
 
 
 
-
-
-
-/* TEXT SETTINGS */
-.textLight {
+/*Indstillingerne for alle 'screenshots' af henholdsvis Limbo og Inside, samt deres kasse arrangement*/
+/* Indstillingerne for hvordan billederne / gifsene er arrangeret */
+.billedeBeholder {
+	width:100%;
+	margin-left:9%;
+	margin-top:3%;
+}
+/* Indstillingerne for de enkelte billeder / gifs */
+.billedeBeholder img {
+	width: 512px;
+    height: 288px;
+}
 	
-	color: #d4d9d8;
+
+
+/* Indstillingerne for teaser billedet for Playdeads næste projekt */
+.PlaydeadTeaser {
+	width:100%;
+}
+
+
+
+/* Indstillingerne for de 2 typer tekst i spillet. Disse har forskellig width indstillinger og bliver brugt forskellige stedder på siden efter behov*/
+.tekstLys {
+  color: #d4d9d8;
   margin: auto;
   width: 29%;
   padding: 10px;
   font-size: 28px;
-margin-top:-5%;
-	
-  
-	
+  margin-top:-28%;
+}
+
+.tekstLys1 {
+  color: #d4d9d8;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  font-size: 28px;
+  margin-top:-30%;
 }
 
 
+/* Her vælges font typen for alt tekst markeret i en p div */
+p { font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"; }
+
+/* Her vælges font typen for alt tekst markeret i en a div */
+a { font-family:Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif"; }
+
+/* Denne class er lavet for at lave mere mellemrum imellem de forskellige sektioner på hjememsiden ved at have en 15% margin i bunden af div'en og dermed skubbe indhold under sig 15% længere ned */
+.mellemrum { margin-bottom:15%; }
 
 
 
+/* Indstillingerne for de anmeldelser / quotes der er fra andre sider og artikler som bliver vist på både Limbos og Insides side */
+.textCitat1 {
+  color: #929c9c;
+  margin-left: 20%;
+  width: 50%;
+  padding: 10px;
+  font-size: 28px;
+  margin-top:2%;
+}
 
 
+.textCitat2 {
+  color: #d4d9d8;
+  margin-left:20%;
+  width: 50%;
+  padding: 10px;
+  font-size: 38px;
+  margin-top:-2.5%;
+}
+
+
+.textCitat3 {
+  color: #929c9c;
+  margin-left: 45%;
+  width: 50%;
+  padding: 10px;
+  font-size: 28px;
+  margin-top:2%;
+}
+
+
+.textCitat4 {
+  color: #d4d9d8;
+  margin-left: 45%;
+  width: 50%;
+  padding: 10px;
+  font-size: 38px;
+  margin-top:-2.5%;
+}
 
 
 
@@ -94,17 +224,24 @@ margin-top:-5%;
 
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
-/*TOP NAVIGATION BAR */
+/*NAVIGATIONS BAR */
 
+/* Disse er indstillingerne for navigationbaren i toppen af skærmen. Dette indeholder formen og farven på baren samt de tekst-baserede knapper og hjemmesidens titel */
 .topnav {
 	margin-left:0%;
-  overflow: hidden;
+    overflow: hidden;
 	background-color: black;
-  /*background-color: #161617;*/
 	padding-right: 40px;
 	height:100px;
 }
 
+/* Det her er indstillingerne for PLAYDEAD titlen i venstre øverste hjørne, dets font størrelse og margin */
+.topnav hovedtitel {
+	font-size:50px; 
+	margin-top: 6px
+}
+
+/*Disse er indstillingerne for de tekst-baserede knapper der er i navigationsbaren */
 .topnav a {
   float: left;
   color: #e8e6e6;
@@ -115,18 +252,51 @@ margin-top:-5%;
   margin-top: 20px
 }
 
+/* Dette kontrollerer baggrunden der bliver vist under de text-baserede knapper samt ændring af tekstens farve når musen hviler over den, uden at klikke på den. */
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
+/* Dette kontrollerer baggrunden der bliver vist under de text-baserede knapper samt ændring af tekstens farve når musen hviler over den, NÅR man klikker på den. */
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
 }
 
-.topnav img {
-	width: 25%;
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/* ÆNDRE HJEMMESIDENS UDSEENDE BASERET PÅ DENS OPLØSNING, HERTIL 465 PIXELS BRED */
+
+/* Denne kode tjekker hvorvidt hjemmesidens bredde er det samme som eller mindre end max-width som i dette tilfælde er sat til 465 pixels. Hvis det er det, il nedenstående indstillinger træde i kraft og ændre på udseendet på hjemmesiden */
+@media only screen and (max-width: 465px) {
+
+/*  Her ændres på selve navigationsbarens form, og højden på den sættes til 250 pixels. Dette gør at der bliver bedre plads til de text-baserede knapper nedenunder og samtidig skaber en overskuelig afstand imellem knap og resten af indholdet på siden.  */
+.topnav {
+	height:250px;
+}
+
+/* Her ændrer vi på hvordan selve knapperne bliver vist samt ændrer på deres skriftstørrelse */
+.topnav a {
+  padding: 5px 5px;
+  margin-right: 20px;
+  margin-left: 6%;
+  font-size: 18px;
+}
+
 }
 
 /* ---------------------------------------------------------------------------------------------------------------------------------------------------------*/
